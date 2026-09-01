@@ -8,7 +8,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",
 .hero{background:rgba(255,255,255,0.6);border-radius:12px;padding:20px;margin:18px 0}
 .hero h2{margin:0 0 6px 0}
 .lead{color:#374151}
-.content{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.content{display:block;gap:24px}
 article{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
 .signup{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.05)}
 .signup h3{margin-top:0}
