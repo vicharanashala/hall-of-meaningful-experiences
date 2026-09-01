@@ -1,0 +1,21 @@
+:root{--bg:#fbfbfd;--card:#ffffff;--muted:#6b7280;--accent:#6d28d9;--accent-2:#6366f1}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.6;margin:0;background:linear-gradient(180deg,#f7f8fc 0%,var(--bg) 100%);color:#0f172a}
+.container{max-width:900px;margin:0 auto;padding:28px}
+.site-header{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:36px 0}
+.site-header h1{margin:0;font-size:28px;letter-spacing:-0.5px}
+.tagline{opacity:0.95;margin-top:8px}
+.hero{background:rgba(255,255,255,0.6);border-radius:12px;padding:20px;margin:18px 0}
+.hero h2{margin:0 0 6px 0}
+.lead{color:#374151}
+.content{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+article{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.signup{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.05)}
+.signup h3{margin-top:0}
+label{display:block;margin:12px 0 6px;font-size:14px;color:#111827}
+input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+button{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;margin-top:12px;cursor:pointer}
+.muted{color:var(--muted);font-size:13px;margin-top:10px}
+.site-footer{padding:20px 0;text-align:center;color:var(--muted)}
+
+@media (max-width:880px){.content{grid-template-columns:1fr}.container{padding:16px}}
