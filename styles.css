@@ -1,4 +1,4 @@
-:root{--bg:#fbfbfd;--card:#ffffff;--muted:#6b7280;--accent:#6d28d9;--accent-2:#6366f1}
+:root{--bg:#fbfbfd;--card:#ffffff;--muted:#6b7280;--accent:#0ea5a4;--accent-2:#0f766e}
 *{box-sizing:border-box}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.6;margin:0;background:linear-gradient(180deg,#f7f8fc 0%,var(--bg) 100%);color:#0f172a}
 .container{max-width:900px;margin:0 auto;padding:28px}
