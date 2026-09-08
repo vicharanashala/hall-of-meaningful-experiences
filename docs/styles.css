@@ -8,6 +8,16 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",
 .hero{background:rgba(255,255,255,0.6);border-radius:12px;padding:20px;margin:18px 0}
 .hero h2{margin:0 0 6px 0}
 .lead{color:#374151}
+.challengers{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin:18px 0}
+.challengers h2{margin:0}
+.challenger-table-wrap{overflow-x:auto;margin-top:18px}
+.challenger-table{width:100%;min-width:720px;border-collapse:collapse;table-layout:fixed;font-size:14px}
+.challenger-table th,.challenger-table td{padding:12px;border:1px solid #dbe5e5;text-align:left;vertical-align:top}
+.challenger-table th{background:#e6fffb;color:#134e4a;font-size:13px}
+.challenger-table th:first-child,.challenger-table td:first-child{width:18%;font-weight:700}
+.challenger-table th:nth-child(2),.challenger-table td:nth-child(2){width:32%}
+.challenger-table td{white-space:pre-line;overflow-wrap:anywhere}
+.challenger-table tbody tr:nth-child(even){background:#f8fffe}
 .content{display:block;gap:24px}
 article{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
 .signup{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.05)}

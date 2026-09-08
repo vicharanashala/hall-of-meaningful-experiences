@@ -21,6 +21,26 @@
       <p class="lead">“Perhaps the most meaningful things in life are the things we do without a deadline, without a reward and without anyone watching. We do them simply because something inside us wants to. And perhaps, that is where we find our HoME.”</p>
     </section>
 
+    <section class="challengers" aria-labelledby="challengers-heading">
+      <h2 id="challengers-heading">2026 Challengers</h2>
+      <p class="muted">The people taking the challenge this year and what they have chosen to pursue.</p>
+      <div class="challenger-table-wrap">
+        <table class="challenger-table">
+          <thead>
+            <tr>
+              <th scope="col">Name or ID</th>
+              <th scope="col">About</th>
+              <th scope="col">HoME commitment</th>
+            </tr>
+          </thead>
+          <tbody id="challenger-table-body">
+            <tr><td colspan="3">Loading challengers…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <noscript><p class="muted">Please enable JavaScript to view the challenger details.</p></noscript>
+    </section>
+
     <section class="content">
       <article>
         <p><strong>Hall of Meaning Experiences</strong> is a project to bring alive the passion that is buried amongst the deadlines and routines. It is a simple invitation to dedicate some time to what you love. The project runs from September 1 to September 30, 30 days of doing something that makes you happy. You can write, read, sing, create content, exercise, paint, dance, cook, play music, take photographs, build something, learn something new, travel, play a sport, spend time in nature, or do anything else that gives you a sense of joy and meaning. There is no definition of what an experience should be. If it means something to you, it belongs here.</p>
@@ -44,6 +64,23 @@
       </aside>
     </section>
   </main>
+
+  <script>
+    fetch("challengers.json")
+      .then(response => response.json())
+      .then(challengers => {
+        const tableBody = document.getElementById("challenger-table-body");
+        tableBody.replaceChildren(...challengers.map(challenger => {
+          const row = document.createElement("tr");
+          [challenger.name, challenger.about, challenger.home].forEach(value => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+          });
+          return row;
+        }));
+      });
+  </script>
 
   <footer class="site-footer">
     <div class="container">
