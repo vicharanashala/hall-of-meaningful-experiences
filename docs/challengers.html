@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2026 Challengers | Hall of Meaningful Experiences</title>
+  <meta name="description" content="Meet the 2026 challengers taking part in the Hall of Meaningful Experiences." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Hall of Meaningful Experiences</h1>
+      <p class="tagline">A 30-day invitation to do something that makes you feel alive.</p>
+      <nav class="site-nav" aria-label="Main menu">
+        <a href="index.html">Home</a>
+        <a href="challengers.html" aria-current="page">2026 Challengers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="challengers page-heading" aria-labelledby="challengers-heading">
+      <h2 id="challengers-heading">2026 Challengers</h2>
+      <p class="muted">The people taking the challenge this year and what they have chosen to pursue.</p>
+      <div class="challenger-table-wrap">
+        <table class="challenger-table">
+          <thead>
+            <tr>
+              <th scope="col">Name or ID</th>
+              <th scope="col">About</th>
+              <th scope="col">HoME commitment</th>
+            </tr>
+          </thead>
+          <tbody id="challenger-table-body">
+            <tr><td colspan="3">Loading challengers...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <noscript><p class="muted">Please enable JavaScript to view the challenger details.</p></noscript>
+    </section>
+  </main>
+
+  <script>
+    fetch("challengers.json")
+      .then(response => response.json())
+      .then(challengers => {
+        const tableBody = document.getElementById("challenger-table-body");
+        tableBody.replaceChildren(...challengers.map(challenger => {
+          const row = document.createElement("tr");
+          [challenger.name, challenger.about, challenger.home].forEach(value => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+          });
+          return row;
+        }));
+      });
+  </script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2026 Hall of Meaningful Experiences</small>
+    </div>
+  </footer>
+</body>
+</html>
