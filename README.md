@@ -6,3 +6,7 @@ Hall of Meaningful Experiences (HoME) is a 30-day project encouraging people to 
 HTML page link:
 
 https://github.com/vicharanashala/hall-of-meaningful-experiences/blob/add-site/docs/index.html
+
+Live site:
+
+https://vicharanashala.github.io/hall-of-meaningful-experiences/
