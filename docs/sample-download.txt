@@ -1,0 +1,10 @@
+Hall of Meaningful Experiences - Sample Download
+
+This is a sample file used to test download tracking for the GitHub Pages site.
+
+The goal of HoME is to create a small practice of joy, creativity, and reflection.
+
+- Commit to one small meaningful action each day.
+- Keep it simple.
+- Enjoy the process.
+- Reflect without performance pressure.

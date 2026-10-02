@@ -6,6 +6,34 @@
   <title>2026 Challengers | Hall of Meaningful Experiences</title>
   <meta name="description" content="Meet the 2026 challengers taking part in the Hall of Meaningful Experiences." />
   <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1HQGDVSEH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R1HQGDVSEH');
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const downloadablePatterns = ['.pdf', '.zip', '.csv', '.doc', '.docx', '.ppt', '.pptx', '.xls', '.xlsx', '.txt', '.mp3', '.mp4', '.json', '.tar', '.gz'];
+
+      document.querySelectorAll('a[href]').forEach(function (link) {
+        const href = link.getAttribute('href') || '';
+        const isDownloadLink = link.hasAttribute('download') || downloadablePatterns.some(function (ext) {
+          return href.toLowerCase().includes(ext);
+        });
+
+        if (!isDownloadLink) return;
+
+        link.addEventListener('click', function () {
+          const fileName = link.getAttribute('download') || href.split('/').pop() || 'download';
+          gtag('event', 'file_download', {
+            file_name: fileName,
+            file_url: href
+          });
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="site-header">
