@@ -21,6 +21,13 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",
 .profile-columns section{border-top:2px solid #d9f4ef;padding-top:10px}
 .profile-columns h4{margin:0 0 6px;color:#0f766e;font-size:12px;letter-spacing:0.08em;text-transform:uppercase}
 .profile-columns p{margin:0;white-space:pre-line;overflow-wrap:anywhere;color:#334155}
+.reflections{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin:18px 0}
+.reflections h2{margin:0}
+.reflection-grid{display:grid;gap:18px;margin-top:20px}
+.reflection-card{background:#fff;border:1px solid #dce9e7;border-radius:10px;padding:20px;box-shadow:0 8px 20px rgba(15,23,42,0.05)}
+.reflection-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.reflection-header h3{margin:0;font-size:21px;color:#134e4a}
+.reflection-card p{margin:0;color:#334155;white-space:pre-line;overflow-wrap:anywhere}
 .content{display:block;gap:24px}
 article{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
 .signup{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.05)}
